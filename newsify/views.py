@@ -97,32 +97,6 @@ def home(request):
         if i[1]>0:
             i[1]=math.log(517/i[1])
 
-    
-    # t_title = "SELECT title FROM toi"
-    # mycursor.execute(t_title)
-    # a = mycursor.fetchall()
-
-    # b_title = "SELECT title FROM bbc"
-    # mycursor.execute(b_title)
-    # b = mycursor.fetchall()
-    
-    # jac = {}
-    # for i in range(1,len(a)+1):
-    #     jac[i] = 0
-    #     toi = tok.tokenize(a[i-1][0])
-    #     for j in range(1, len(b)+1):
-    #         inter = 0
-    #         union = 0
-    #         bbc = tok.tokenize(b[j-1][0])
-    #         for word in toi:
-    #             if word in bbc:
-    #                 inter += 1
-    #         union = len(a) + len(b) - inter
-    #         j = inter/union
-    #         if jac[i] < j:
-    #             jac[i] = j
-    # print(jac)
-
     t_names = "SELECT * FROM toi"
     mycursor.execute(t_names)
     c = mycursor.fetchall()
